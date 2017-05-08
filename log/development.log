@@ -24,3 +24,972 @@
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Testing"], ["description", "testing"], ["created_at", "2016-01-26 15:06:03.106369"], ["updated_at", "2016-01-26 15:06:03.106369"]]
   [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2017-05-08 12:59:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 34ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2017-05-08 13:00:08 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 1299ms (Views: 1288.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-05-08 13:00:09 -0400
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-05-08 13:00:09 -0400
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:00:14 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:01:06 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-05-08 13:01:06 -0400
+
+
+Started GET "/posts" for ::1 at 2017-05-08 13:01:47 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-05-08 13:01:47 -0400
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:02:12 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:02:15 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:06:05 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/gabystern/Development/flatiron_labs/module_2/refactoring-views-with-helpers-reading-web-040317/app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.1ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:06:40 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:06:43 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/appearances/new" for ::1 at 2017-05-08 13:07:07 -0400
+
+ActionController::RoutingError (No route matches [GET] "/appearances/new"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (62.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (131.9ms)
+
+
+Started GET "/authors" for ::1 at 2017-05-08 13:07:08 -0400
+
+ActionController::RoutingError (No route matches [GET] "/authors"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (108.8ms)
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:07:26 -0400
+Processing by AuthorsController#show as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 8ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=):
+  app/controllers/authors_controller.rb:3:in `show'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:07:42 -0400
+Processing by AuthorsController#show as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=):
+  app/controllers/authors_controller.rb:3:in `show'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.6ms)
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:08:11 -0400
+Processing by AuthorsController#show as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=):
+  app/controllers/authors_controller.rb:3:in `show'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (88.3ms)
+
+
+Started GET "/authors/3/show" for ::1 at 2017-05-08 13:10:52 -0400
+
+ActionController::RoutingError (No route matches [GET] "/authors/3/show"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (67.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.3ms)
+
+
+Started GET "/authors/3" for ::1 at 2017-05-08 13:10:55 -0400
+
+ActionController::RoutingError (No route matches [GET] "/authors/3"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.2ms)
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:11:57 -0400
+Processing by AuthorsController#show as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=):
+  app/controllers/authors_controller.rb:3:in `show'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.4ms)
+
+
+Started GET "/authors" for ::1 at 2017-05-08 13:12:04 -0400
+
+ActionController::RoutingError (No route matches [GET] "/authors"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (64.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.7ms)
+
+
+Started GET "/authors/1" for ::1 at 2017-05-08 13:12:06 -0400
+
+ActionController::RoutingError (No route matches [GET] "/authors/1"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (95.8ms)
+
+
+Started GET "/authors" for ::1 at 2017-05-08 13:15:10 -0400
+
+ActionController::RoutingError (No route matches [GET] "/authors"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/gabystern/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (68.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.8ms)
+
+
+Started GET "/posts" for ::1 at 2017-05-08 13:15:13 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:15:15 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:15:21 -0400
+Processing by AuthorsController#show as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=):
+  app/controllers/authors_controller.rb:3:in `show'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.7ms)
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:15:36 -0400
+Processing by AuthorsController#show as HTML
+  Rendered authors/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <% title @author.name %>
+    2: 
+    3: <h1><%= @author.name %></h1>
+    4: <p>Posts:</p>
+  app/views/authors/show.html.erb:1:in `_app_views_authors_show_html_erb__3394676131079294885_70286709484120'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (96.9ms)
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:16:45 -0400
+Processing by AuthorsController#show as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" LIMIT 1
+  Rendered authors/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <% title @author.name %>
+    2: 
+    3: <h1><%= @author.name %></h1>
+    4: <p>Posts:</p>
+  app/views/authors/show.html.erb:1:in `_app_views_authors_show_html_erb__3394676131079294885_70286709484120'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (103.5ms)
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:16:51 -0400
+Processing by AuthorsController#show as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" LIMIT 1[0m
+  Rendered authors/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <% title @author.name %>
+    2: 
+    3: <h1><%= @author.name %></h1>
+    4: <p>Posts:</p>
+  app/views/authors/show.html.erb:1:in `_app_views_authors_show_html_erb__3394676131079294885_70286709484120'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.9ms)
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:17:04 -0400
+Processing by AuthorsController#show as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" LIMIT 1
+  Rendered authors/show.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <!-- <% title @author.name %> -->
+    2: 
+    3: <h1><%= @author.name %></h1>
+    4: <p>Posts:</p>
+  app/views/authors/show.html.erb:1:in `_app_views_authors_show_html_erb__3394676131079294885_70286737901380'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.1ms)
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:17:08 -0400
+Processing by AuthorsController#show as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" LIMIT 1[0m
+  Rendered authors/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <h1><%= @author.name %></h1>
+    3: <p>Posts:</p>
+    4: <% @author.posts.each do |post| %>
+    5:   <div><%= post.title %> - <%= last_updated post %></div>
+  app/views/authors/show.html.erb:2:in `_app_views_authors_show_html_erb__3394676131079294885_70286721467060'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.5ms)
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:17:26 -0400
+Processing by AuthorsController#show as HTML
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors"  ORDER BY "authors"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 106123ms (ActiveRecord: 0.9ms)
+
+SystemExit (exit):
+  app/controllers/authors_controller.rb:4:in `show'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (86.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (161.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (9.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (65.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (134.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Gaby"], ["genre", "Action"], ["bio", "NYC born"], ["created_at", "2017-05-08 17:19:19.722970"], ["updated_at", "2017-05-08 17:19:19.722970"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+
+
+Started GET "/authors/show" for ::1 at 2017-05-08 13:19:31 -0400
+Processing by AuthorsController#show as HTML
+  [1m[35mAuthor Load (1.2ms)[0m  SELECT  "authors".* FROM "authors" LIMIT 1
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 1]]
+  Rendered authors/show.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 228ms (Views: 175.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/posts" for ::1 at 2017-05-08 13:20:54 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 206ms (Views: 195.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:20:57 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 201ms (Views: 181.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:20:59 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 212ms (Views: 201.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 13:22:53 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JcXAuwqoD1mW+QIBSgcPf5ZSDyyonU9Nq9ImTia3CdSKcRfGr+7UKsjFGnwKclZTA77mwQJfhzIl2FZZZInxhw==", "post"=>{"title"=>"My edit", "description"=>"testing"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "My Edit"], ["updated_at", "2017-05-08 17:22:53.802928"], ["id", 1]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 33ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:22:53 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 105ms (Views: 97.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:25:47 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 291ms (Views: 216.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:25:47 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 192ms (Views: 181.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:25:59 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 241ms (Views: 181.8ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 13:26:01 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mnsUPvT+Q7YTcIe02DXBMyaQJhOMlCq3+jyH39ERg0w1z8NDUbiYxU1Mn8mYQJgfs3zP/iZW4sh0NvfIky97Hw==", "post"=>{"title"=>"My Edit", "description"=>"testing"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  app/controllers/posts_controller.rb:22:in `update'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (167.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (32.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (274.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (71.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (168.2ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:26:15 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.8ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 245ms (Views: 177.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:26:16 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 161ms (Views: 151.4ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 13:26:18 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1kcG8jQpfzO382VMc8wm7QYfwnMC809bG5x0WsAFCv47ctmbZZ+j5Dj1ehxumm3IfSW5GbJBULiZAHGKT7seA==", "post"=>{"title"=>"My Edit", "description"=>"testing"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 30174ms (ActiveRecord: 0.4ms)
+
+SystemExit (exit):
+  app/controllers/posts_controller.rb:23:in `update'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (180.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (48.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (292.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (64.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (141.6ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:26:51 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 220ms (Views: 160.5ms | ActiveRecord: 2.7ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 13:26:53 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"azRvXe5RskqLHHg+bZPvLeXnBE1rhrRygMLGERC7wLPEgLggSxdpOdUgYEMt5rYBcAvtoMFEfA0OyLYGUoU44A==", "post"=>{"title"=>"My Edit", "description"=>"testing"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 7155ms (ActiveRecord: 0.7ms)
+
+SystemExit (exit):
+  app/controllers/posts_controller.rb:23:in `update'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (207.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (38.8ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (317.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.1ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (64.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (144.8ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:27:02 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 260ms (Views: 186.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:27:04 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 226ms (Views: 214.2ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 13:27:07 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TFX+YFO5rUGzh941ldbdUB5ltbYcBmqS5pBOCAVQOhzj4Skd9v92Mu27xkjVo4R8i4lcW7bEou1omj4fR27CTw==", "post"=>{"title"=>"My Edit1", "description"=>"testing"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms)
+
+TypeError (no implicit conversion of Symbol into Integer):
+  app/controllers/posts_controller.rb:22:in `[]'
+  app/controllers/posts_controller.rb:22:in `update'
+
+
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (184.3ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (43.9ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (286.5ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (72.2ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/gabystern/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (149.7ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:28:04 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 286ms (Views: 199.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:28:08 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 255ms (Views: 240.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:28:08 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 215ms (Views: 203.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 13:28:12 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oPXeLhm6SFx0nkg2jeMwqY0D1d1XyX4F4L6tHFdOGdcPQQlTvPyTLyqiUEvNlmmFGO88MP0LtnputN0LFXDhhA==", "post"=>{"title"=>"My Edit3", "description"=>"testing"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "My Edit3"], ["updated_at", "2017-05-08 17:28:12.332628"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 57ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:28:12 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 201ms (Views: 188.8ms | ActiveRecord: 0.7ms)

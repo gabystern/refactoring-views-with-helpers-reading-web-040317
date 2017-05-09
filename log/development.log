@@ -993,3 +993,301 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 201ms (Views: 188.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for ::1 at 2017-05-08 13:34:15 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 243ms (Views: 223.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:34:18 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 199ms (Views: 185.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:34:23 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 218ms (Views: 207.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 13:34:29 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i1W1mRDf/A/paHVxTbcyrBCJAMtMMg2ck0YU+0XQmfQk4WLktZknfLdUbQwNwmuAhWXpJubwxeMdTGTsB+5hpw==", "post"=>{"title"=>"My Edit1", "description"=>"testing"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "My Edit1"], ["updated_at", "2017-05-08 17:34:29.223298"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 27ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:34:29 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 124ms (Views: 104.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:35:28 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 208ms (Views: 193.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:35:46 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 190ms (Views: 178.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:35:55 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 204ms (Views: 193.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 13:35:57 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"afgPQuc5wWFq0leFh0EhT33aX7itOqTad7EShUwyM2jGTNg/Qn8aEjTuT/jHNHhj6Da2VQf4bKX5u2KSDgzLOw==", "post"=>{"title"=>"My Edit1", "description"=>"testing"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 19ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:35:57 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 112ms (Views: 105.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:36:00 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 240ms (Views: 227.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 13:36:01 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eSoS6YGuDue+IdjTrQr1kSMT1aR1r0S/UNY/5sSVf07WnsWUJOjVlOAdwK7tf6y9tv88Sd9tjMDe3E/xhquHHQ==", "post"=>{"title"=>"My Edit1", "description"=>"testing2"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["description", "testing2"], ["updated_at", "2017-05-08 17:36:01.893345"], ["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 56ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:36:01 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 217ms (Views: 202.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:38:42 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 271ms (Views: 260.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 13:38:49 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"unRxVLyehSnEYdpYwDdT+g3vXbbCOyBV7eJp7z1vycMVwKYpGdheWppdwiWAQgrWmAO0W2j56Cpj6Bn4f1ExkA==", "post"=>{"title"=>"My Edit New", "description"=>"testing2 new"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "My Edit New"], ["description", "testing2 new"], ["updated_at", "2017-05-08 17:38:49.186597"], ["id", 1]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 68ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:38:49 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 207ms (Views: 193.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:39:11 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 217ms (Views: 205.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:39:28 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 250ms (Views: 238.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:39:28 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 206ms (Views: 194.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 13:39:31 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"txlakyU0YxVZ3HqWmInL/ifu4PSwYS0pNzS/xZpEEsMYrY3ugHK4ZgfgYuvY/JLSsgIJGRqj5Va5Ps/S2HrqkA==", "post"=>{"title"=>"My Edit New", "description"=>"testing2 newe"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (0.8ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["description", "testing2 newe"], ["updated_at", "2017-05-08 17:39:31.127824"], ["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 54ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:39:31 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 163ms (Views: 152.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 13:40:11 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 190ms (Views: 178.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:40:14 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 200ms (Views: 190.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:50:30 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 290ms (Views: 275.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 13:50:30 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 232ms (Views: 207.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for ::1 at 2017-05-08 22:09:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 253ms (Views: 237.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 22:09:33 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 22:09:37 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 22:13:02 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 41ms (Views: 28.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 22:13:05 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 22:13:08 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xrL4b200hNCCIQ52i5ZS9zY8ds9YkkFgrfG6qWaTsFhpBi8SyHJfo9wdFgvL4wvbo9CfIvJQiR8j+8q+JK1ICw==", "post"=>{"title"=>"My Edit New", "description"=>"testing2 newe"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 22:13:08 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-05-08 22:13:12 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/1" for ::1 at 2017-05-08 22:13:16 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UmVBWqucnSxIFu2OhYHTn/v62O5vvI6//67T5eDlMC790ZYnDtpGXxYq9fPF9IqzbhYxA8V+RsBxpKPyotvIfQ==", "post"=>{"title"=>"My Edit New", "description"=>"testing2 new "}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["description", "testing2 new "], ["updated_at", "2017-05-09 02:13:16.379353"], ["id", 1]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 8ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-05-08 22:13:16 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.1ms)
